@@ -1,8 +1,8 @@
 #!/bin/bash
 
 apt update && apt upgrade
-apt install curl
-add-apt-repository ppa:deadsnakes/ppa
+apt install curl -y
+add-apt-repository ppa:deadsnakes/ppa -y
 apt install python3.9 python-is-python3 -y
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 
