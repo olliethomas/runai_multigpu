@@ -6,7 +6,7 @@ export DEBIAN_FRONTEND="noninteractive"
 export PYENV_ROOT="./.pyenv"
 export PATH="${PYENV_ROOT}/shims:${PYENV_ROOT}/bin:${PATH}"
 
-pythonVersions='python3.6 python3.7 python3.8 python3.9 python3.10'
+pythonVersions='python3.6 python3.7 python3.8 python3.9 python3.10 python3.11'
 
 apt update && apt upgrade -y
 apt install curl -y
@@ -16,7 +16,7 @@ apt install curl -y
 #apt install -y --no-install-recommends $pythonVersions
 apt install git -y
 git clone --depth=1 https://github.com/pyenv/pyenv.git .pyenv
-pyenv install ${pythonVersions}
+pyenv install -f $pythonVersions
 
 
 apt install python3-distutils python-is-python3 -y
