@@ -25,7 +25,7 @@ class AE(pl.LightningModule):
         return optim.AdamW(self.parameters(), lr=1e-3)
 
 def main(gpus: int = 1):
-    dm = CelebADataModule(root="/Users/ot44/Data")
+    dm = CelebADataModule(root="/storage/data")
     dm.prepare_data()
     dm.setup()
     autoencoder = AE(height=dm.dim_x.h)
