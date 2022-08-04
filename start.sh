@@ -13,4 +13,4 @@ source $HOME/.poetry/env
 poetry install
 poetry run pip uninstall torch torchvision torchaudio
 poetry run pip install torch==1.12.0 torchvision==0.13.0 --extra-index-url https://download.pytorch.org/whl/cu113
-python main.py "$@"
+poetry run python main.py "$@"
