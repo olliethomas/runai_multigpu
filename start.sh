@@ -7,7 +7,7 @@ apt update && apt upgrade
 apt install curl -y
 apt install software-properties-common -y
 add-apt-repository ppa:deadsnakes/ppa -y
-apt install python3.9 python-is-python3 -y
+apt install python3.9 python3.9-distutils python-is-python3 -y
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 source $HOME/.poetry/env
 poetry install
