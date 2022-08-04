@@ -5,11 +5,11 @@ export DEBIAN_FRONTEND="noninteractive"
 
 pythonVersions='python3.6 python3.7 python3.8 python3.9 python3.10'
 
-apt update && apt upgrade
+apt update && apt upgrade -y
 apt install curl -y
 apt install software-properties-common -y --no-install-recommends
 add-apt-repository ppa:deadsnakes/ppa -y
-apt update && apt upgrade
+apt update && apt upgrade -y
 apt install -y --no-install-recommends $pythonVersions
 apt install python3-distutils python-is-python3 -y
 apt purge -y --auto-remove software-properties-common && rm -rf /var/lib/apt/lists/*
