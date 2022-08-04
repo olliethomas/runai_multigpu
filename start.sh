@@ -10,9 +10,9 @@ apt install curl -y
 apt install software-properties-common -y --no-install-recommends
 add-apt-repository ppa:deadsnakes/ppa -y
 apt update && apt upgrade
-apt-get install -y --no-install-recommends $pythonVersions
+apt install -y --no-install-recommends $pythonVersions
 apt install python3-distutils python-is-python3 -y
-apt-get purge -y --auto-remove software-properties-common && rm -rf /var/lib/apt/lists/*
+apt purge -y --auto-remove software-properties-common && rm -rf /var/lib/apt/lists/*
 
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 source $HOME/.poetry/env
