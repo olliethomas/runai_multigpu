@@ -10,6 +10,24 @@ apt install curl -y
 #apt update && apt upgrade -y
 #apt install -y --no-install-recommends $pythonVersions
 apt install git -y
+apt install -y --no-install-recommends \
+    build-essential \
+    curl \
+    libbz2-dev \
+    libffi-dev \
+    liblzma-dev \
+    libncursesw5-dev \
+    libreadline-dev \
+    libsqlite3-dev \
+    libssl-dev \
+    libxml2-dev \
+    libxmlsec1-dev \
+    llvm \
+    make \
+    tk-dev \
+    wget \
+    xz-utils \
+    zlib1g-dev
 git clone --depth=1 https://github.com/pyenv/pyenv.git $HOME/.pyenv
 
 export PYENV_ROOT="${HOME}/.pyenv"
