@@ -16,8 +16,8 @@ export PYENV_ROOT="${HOME}/.pyenv"
 export PATH="${PYENV_ROOT}/shims:${PYENV_ROOT}/bin:${PATH}"
 
 eval "$(pyenv init --path)"
-for i in {6..11} ; do
-    pyenv install -f 3.${i}.0
+for i in 3.7.13 3.8.13 3.9.13 3.10.6 ; do
+    pyenv install -f $i
 done
 
 
