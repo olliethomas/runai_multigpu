@@ -3,8 +3,6 @@
 export TZ="Europe/Moscow"
 export DEBIAN_FRONTEND="noninteractive"
 
-pythonVersions='python3.6 python3.7 python3.8 python3.9 python3.10 python3.11'
-
 apt update && apt upgrade -y
 apt install curl -y
 #apt install software-properties-common -y --no-install-recommends
@@ -18,8 +16,8 @@ export PYENV_ROOT="${HOME}/.pyenv"
 export PATH="${PYENV_ROOT}/shims:${PYENV_ROOT}/bin:${PATH}"
 
 eval "$(pyenv init --path)"
-for i in $pythonVersions ; do
-    pyenv install -f $i
+for i in {6..11} ; do
+    pyenv install -f 3.${i}.0
 done
 
 
