@@ -1,5 +1,8 @@
 #!/bin/bash
 
+export TZ="Europe/Moscow"
+export DEBIAN_FRONTEND="noninteractive"
+
 apt update && apt upgrade
 apt install curl -y
 apt install software-properties-common -y
