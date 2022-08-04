@@ -1,5 +1,6 @@
 #!/bin/bash
 
+apt update && apt upgrade
 apt install curl
 apt install python3.9 python-is-python3
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
