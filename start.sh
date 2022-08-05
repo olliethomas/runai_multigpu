@@ -34,9 +34,7 @@ export PYENV_ROOT="${HOME}/.pyenv"
 export PATH="${PYENV_ROOT}/shims:${PYENV_ROOT}/bin:${PATH}"
 
 eval "$(pyenv init --path)"
-for i in 3.7.13 3.8.13 3.9.13 3.10.6 ; do
-    pyenv install -f $i
-done
+pyenv install -f $PYV
 
 
 apt install python3-distutils python-is-python3 -y
@@ -45,6 +43,7 @@ apt purge -y --auto-remove software-properties-common && rm -rf /var/lib/apt/lis
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 source $HOME/.poetry/env
 poetry install
+poetry env use $PYV
 poetry run python -m pip uninstall --yes torch torchvision torchaudio
 poetry run python -m pip install --no-input torch==1.12.0 torchvision==0.13.0 --extra-index-url https://download.pytorch.org/whl/cu113
 poetry run python main.py "$@"
